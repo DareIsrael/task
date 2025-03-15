@@ -33,6 +33,7 @@ const Dashboard = () => {
     };
 
     fetchUsers();
+
   }, []);
 
  
@@ -71,11 +72,9 @@ const Dashboard = () => {
       <img src={sidebarImg} alt="Sidebar" className="sidebar-img" />
       
       <div className="dashboard-container">
-       <div className="dash_profile">
-       {filteredUsers.map((user, index) => (
-         
-        <h1>Hello {user.name}   key={index}</h1>
-      ))}
+       <div className="dash_profile">   
+        <h1>Hello Evano</h1>
+      
         <button onClick={handleLogout} className="logout-button">
           Logout
         </button>
