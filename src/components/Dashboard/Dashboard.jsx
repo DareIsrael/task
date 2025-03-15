@@ -72,7 +72,7 @@ const Dashboard = () => {
       
       <div className="dashboard-container">
        <div className="dash_profile">
-        <h1>Hello Evano</h1>
+        <h1>Hello {user.name}</h1>
         <button onClick={handleLogout} className="logout-button">
           Logout
         </button>
