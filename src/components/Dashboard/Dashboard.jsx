@@ -72,7 +72,9 @@ const Dashboard = () => {
       
       <div className="dashboard-container">
        <div className="dash_profile">
+       {filteredUsers.map((user, index) => (
         <h1>Hello {user.name}</h1>
+      ))}
         <button onClick={handleLogout} className="logout-button">
           Logout
         </button>
