@@ -10,6 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const url = process.env.REACT_APP_BACKEND_BASEURL;
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -22,7 +23,7 @@ const Login = () => {
 
     try {
      
-      const response = await axios.post("http://localhost:5000/users/login", {
+      const response = await axios.post(url+"/users/login", {
         email,
         password,
       });

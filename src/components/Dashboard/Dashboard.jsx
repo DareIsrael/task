@@ -11,13 +11,13 @@ const Dashboard = () => {
   const [users, setUsers] = useState([]); 
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(""); 
-
+  const url = process.env.REACT_APP_BACKEND_BASEURL;
  
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem("token"); 
-        const response = await axios.get("http://localhost:5000/users/getUsers", {
+        const response = await axios.get(url+"/users/getUsers", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -14,6 +14,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const url = process.env.REACT_APP_BACKEND_BASEURL;
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -26,7 +27,7 @@ const SignUp = () => {
 
     try {
       // Make API call to register endpoint using Axios
-      const response = await axios.post("http://localhost:5000/users/register", {
+      const response = await axios.post(url+"/users/register", {
         name,
         phone,
         email,
