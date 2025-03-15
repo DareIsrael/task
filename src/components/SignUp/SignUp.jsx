@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Import Axios
 import backgroundImg from "../../assets/Background.png";
 import "./SignUp.css";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -122,9 +123,9 @@ const SignUp = () => {
             Signup now
           </button>
         </form>
-        <p>
-          Already have an account? <a href="/login">Login now</a>
-        </p>
+           <p>
+            Already have an account? <Link to="/login">Login now</Link>
+          </p>
       </div>
     </div>
   );
