@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Import Axios
 import backgroundImg from "../../assets/Background.png";
-import "./Signup.css";
+import "./SignUp.css";
 
 const SignUp = () => {
   const [name, setName] = useState("");
