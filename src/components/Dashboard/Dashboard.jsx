@@ -11,7 +11,7 @@ const Dashboard = () => {
   const [users, setUsers] = useState([]); 
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(""); 
-  const url = process.env.REACT_APP_BACKEND_BASEURL;
+  const url = import.meta.env.VITE_BACKEND_BASEURL;
  
   useEffect(() => {
     const fetchUsers = async () => {

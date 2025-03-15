@@ -14,7 +14,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const url = process.env.REACT_APP_BACKEND_BASEURL;
+  const url = import.meta.env.VITE_BACKEND_BASEURL;
 
   const handleSignup = async (e) => {
     e.preventDefault();

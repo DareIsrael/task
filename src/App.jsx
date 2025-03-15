@@ -9,8 +9,7 @@ const App = () => {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
 
   return (
- 
-      <Routes>
+    <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route
@@ -20,6 +19,8 @@ const App = () => {
         <Route path="/" element={<Navigate to="/login" />} />
         
       </Routes>
+ 
+      
     
   );
 };
